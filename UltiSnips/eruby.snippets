@@ -245,7 +245,7 @@ page.visual_effect :${1:toggle_slide}, ${2:"${3:DOM ID}"}
 endsnippet
 
 snippet rp "render (partial) (rp)"
-<%= render "${1:item}" %>
+<%= render "${1}" %>
 endsnippet
 
 snippet rpc "render (partial,collection) (rpc)"
@@ -289,5 +289,6 @@ snippet each "each loop"
 <% ${1:@collection}.each do |${2:item}| %>
 	${3}
 <% end %>
+endsnippet
 
 # vim:ft=snippets:

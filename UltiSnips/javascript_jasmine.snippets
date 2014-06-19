@@ -4,7 +4,7 @@ priority -50
 # for jasmine-jquery matchers
 #
 
-snippet des "Describe (js)" b
+snippet desc "Describe (js)" b
 describe('${1:description}', function() {
 	$0
 });
@@ -50,6 +50,10 @@ snippet ee "expect to equal (js)" b
 expect(${1:target}).toEqual(${2:value});
 endsnippet
 
+snippet eb "expect to be (js)" b
+expect(${1:target}).toBe(${2:value});
+endsnippet
+
 snippet em "expect to match (js)" b
 expect(${1:target}).toMatch(${2:pattern});
 endsnippet
@@ -68,6 +72,10 @@ endsnippet
 
 snippet ed "expect to be defined (js)" b
 expect(${1:target}).toBeDefined();
+endsnippet
+
+snippet eu "expect to be undefined (js)" b
+expect(${1:target}).toBeUndefined();
 endsnippet
 
 snippet en "expect to be null (js)" b
