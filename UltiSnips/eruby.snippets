@@ -18,6 +18,7 @@ def textmate_var(var, snip):
 		TM_RAILS_TEMPLATE_END_RUBY_EXPR = snip.opt('g:tm_rails_template_end_ruby_expr', ' %>'),
 		TM_RAILS_TEMPLATE_START_RUBY_INLINE = snip.opt('g:tm_rails_template_start_ruby_inline', '<% '),
 		TM_RAILS_TEMPLATE_END_RUBY_INLINE = snip.opt('g:tm_rails_template_end_ruby_inline', ' %>'),
+		TM_RAILS_TEMPLATE_START_RUBY_COMMENT = snip.opt('g:tm_rails_template_start_ruby_comment', '<%# '),
 		TM_RAILS_TEMPLATE_END_RUBY_BLOCK = '<% end %>'
 	)
 	snip.rv = lookup[var]
@@ -31,6 +32,10 @@ endsnippet
 
 snippet = "<%= ${0} %>"
 `!p textmate_var('TM_RAILS_TEMPLATE_START_RUBY_EXPR', snip)`${0}`!p textmate_var('TM_RAILS_TEMPLATE_END_RUBY_EXPR', snip)`
+endsnippet
+
+snippet # "<%# ${0} %>"
+`!p textmate_var('TM_RAILS_TEMPLATE_START_RUBY_COMMENT', snip)`${0}`!p textmate_var('TM_RAILS_TEMPLATE_END_RUBY_EXPR', snip)`
 endsnippet
 
 ###########################################################################
@@ -279,6 +284,10 @@ endsnippet
 
 snippet if "if (ERB)"
 <% if ${1:condition} %>$0
+endsnippet
+
+snippet unless "unless (ERB)"
+<% unless ${1:condition} %>$0
 endsnippet
 
 snippet lf "link_to_function"

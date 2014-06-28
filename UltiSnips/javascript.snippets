@@ -52,6 +52,12 @@ function ${1:function_name}(${2:argument}) {
 }
 endsnippet
 
+snippet f "function (f)"
+function(${1:argument}) {
+	${VISUAL}$0
+}${10:,}
+endsnippet
+
 snippet iife "Immediately-Invoked Function Expression (iife)"
 (function (${1:argument}) {
 	${VISUAL}$0
@@ -76,6 +82,18 @@ snippet timeout "setTimeout function"
 setTimeout(function() {
 	${VISUAL}$0
 }${2:.bind(${3:this})}, ${1:10});
+endsnippet
+
+snippet map "map a collection"
+${1:collection}.map(function(${2:argument}) {
+	${VISUAL}$0
+});
+endsnippet
+
+snippet forEach "iterate a collection"
+${1:collection}.forEach(function(${2:argument}) {
+	${VISUAL}$0
+});
 endsnippet
 
 # Snippets for Console Debug Output
