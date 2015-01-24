@@ -78,6 +78,14 @@ if (${1:bananas}) {
 }
 endsnippet
 
+snippet switch "switch"
+switch (${1:expression}) {
+	case ${2://match}:
+		${VISUAL}$0
+${3:      break;}
+}
+endsnippet
+
 snippet timeout "setTimeout function"
 setTimeout(function() {
 	${VISUAL}$0
