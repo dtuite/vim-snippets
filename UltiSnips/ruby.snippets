@@ -12,6 +12,10 @@ $0
 endsnippet
 
 
+snippet ap "<class_name>#<method_name>: <debug info>"
+ap "#{self.class.name}##{__method__}: #{${1:log}}"
+endsnippet
+
 
 snippet If "<command> if <expression>"
 ${1:command} if ${0:expression}
